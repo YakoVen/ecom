@@ -1,0 +1,20 @@
+{
+  "name": "screenshot-engine",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "Multi-plan, multi-viewport screenshot library generator for all ecom plan tiers.",
+  "scripts": {
+    "screenshots": "node take-screenshots.mjs",
+    "screenshots:beginner": "node take-screenshots.mjs --plans beginner",
+    "screenshots:basic": "node take-screenshots.mjs --plans basic",
+    "screenshots:intermediate": "node take-screenshots.mjs --plans intermediate",
+    "screenshots:professional": "node take-screenshots.mjs --plans professional",
+    "screenshots:enterprise": "node take-screenshots.mjs --plans enterprise",
+    "serve": "node serve.mjs",
+    "verify": "node verify-screenshots.mjs"
+  },
+  "devDependencies": {
+    "puppeteer": "^25.12.0"
+  }
+}

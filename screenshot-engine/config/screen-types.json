@@ -1,0 +1,78 @@
+{
+  "$comment": "Screen types for the screenshot library. Widths/heights map to Tailwind's default breakpoints.",
+  "breakpoints": {
+    "sm": "640px",
+    "md": "768px",
+    "lg": "1024px",
+    "xl": "1280px",
+    "2xl": "1536px"
+  },
+  "screenTypes": [
+    {
+      "id": "mobile-small",
+      "label": "Mobile Small",
+      "width": 375,
+      "height": 667,
+      "deviceScaleFactor": 2,
+      "isMobile": true,
+      "hasTouch": true,
+      "userAgent": "Mozilla/5.0 (iPhone; CPU iPhone OS 17_0 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/17.0 Mobile/15E148 Safari/604.1",
+      "notes": "iPhone SE / small Android. Below Tailwind sm breakpoint."
+    },
+    {
+      "id": "mobile-large",
+      "label": "Mobile Large",
+      "width": 414,
+      "height": 896,
+      "deviceScaleFactor": 2,
+      "isMobile": true,
+      "hasTouch": true,
+      "userAgent": "Mozilla/5.0 (iPhone; CPU iPhone OS 17_0 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/17.0 Mobile/15E148 Safari/604.1",
+      "notes": "iPhone 14 Pro. Still below Tailwind sm breakpoint."
+    },
+    {
+      "id": "tablet-portrait",
+      "label": "Tablet Portrait",
+      "width": 768,
+      "height": 1024,
+      "deviceScaleFactor": 2,
+      "isMobile": true,
+      "hasTouch": true,
+      "userAgent": "Mozilla/5.0 (iPad; CPU OS 17_0 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/17.0 Mobile/15E148 Safari/604.1",
+      "notes": "iPad portrait. At Tailwind md breakpoint."
+    },
+    {
+      "id": "tablet-landscape",
+      "label": "Tablet Landscape",
+      "width": 1024,
+      "height": 768,
+      "deviceScaleFactor": 2,
+      "isMobile": true,
+      "hasTouch": true,
+      "userAgent": "Mozilla/5.0 (iPad; CPU OS 17_0 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/17.0 Mobile/15E148 Safari/604.1",
+      "notes": "iPad landscape. At Tailwind lg breakpoint."
+    },
+    {
+      "id": "desktop-small",
+      "label": "Desktop Small",
+      "width": 1280,
+      "height": 800,
+      "deviceScaleFactor": 1,
+      "isMobile": false,
+      "hasTouch": false,
+      "userAgent": null,
+      "notes": "Laptop 720p. At Tailwind xl breakpoint. Matches legacy screenshot script."
+    },
+    {
+      "id": "desktop-large",
+      "label": "Desktop Large",
+      "width": 1920,
+      "height": 1080,
+      "deviceScaleFactor": 1,
+      "isMobile": false,
+      "hasTouch": false,
+      "userAgent": null,
+      "notes": "Full HD monitor. Above Tailwind 2xl breakpoint."
+    }
+  ]
+}
