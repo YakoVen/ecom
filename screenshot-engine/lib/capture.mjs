@@ -5,6 +5,8 @@
  * Login happens once per plan per browser session.
  */
 
+import fs from 'fs';
+import path from 'path';
 import puppeteer from 'puppeteer';
 import {
   sleep,
@@ -63,8 +65,7 @@ function findLocalChrome() {
 
 function existsSafe(p) {
   try {
-    // eslint-disable-next-line n/no-sync
-    return require('fs').existsSync(p);
+    return fs.existsSync(p);
   } catch {
     return false;
   }
@@ -235,8 +236,7 @@ export async function captureRoute(page, ctx) {
     await waitForImages(page);
 
     const outPath = screenshotPath(plan.id, screenType.id, pageEntry.name);
-    ensureDir(outPath.substring(0, outPath.lastIndexOf('\\')));
-    ensureDir(outPath.substring(0, outPath.lastIndexOf('/')));
+    ensureDir(path.dirname(outPath));
 
     await page.screenshot({
       path: outPath,
@@ -245,7 +245,7 @@ export async function captureRoute(page, ctx) {
     });
 
     record.file = relativeToEngine(outPath);
-    record.bytes = (await import('fs')).statSync(outPath).size;
+    record.bytes = fs.statSync(outPath).size;
     record.status = 'ok';
     record.detail = `http ${response ? response.status() : 'n/a'}`;
     return record;

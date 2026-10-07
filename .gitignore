@@ -1,0 +1,28 @@
+# Each plan folder is its own Git repository (see README).
+# They are NOT submodules of this docs repo — keep them separate.
+beginner-plan/
+basic-plan/
+intermediate-plan/
+professional-plan/
+enterprise-plan/
+
+# Secrets
+.env
+.env.local
+.env.*.local
+serviceAccountKey.json
+*-service-account.json
+
+# Dependencies
+node_modules/
+
+# Build output
+.next/
+out/
+build/
+dist/
+*.tsbuildinfo
+
+# OS
+.DS_Store
+Thumbs.db
